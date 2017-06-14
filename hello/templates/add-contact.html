@@ -1,0 +1,26 @@
+{%  extends 'base.html' %}
+
+{% block content %}
+<h2>Enter contact details here</h2>
+<form method="POST" enctype="multipart/form-data">
+    <input type="hidden" value="{{ csrf_token}}" name="csrfmiddlewaretoken"/>
+
+    <fieldset>
+        <p><label for="first_name">First Name</label>
+        <input id="first_name" type="text" name="first_name" placeholder="First Name"></p>
+
+        <p><label for="last_name">Second Name</label>
+        <input id="last_name" type="text" name="last_name" placeholder="Second Name"></p>
+        
+        <p><label for="mobile">Mobile</label>
+        <input id="mobile" type="phone" name="mobile" placeholder="Mobile"></p>
+        
+        <p><label for="email">Email</label>
+        <input id="email" type="email" name="email" placeholder="Email"></p>
+        
+        <input type="submit">
+
+    </fieldset>
+</form>
+
+{% endblock content %}
